@@ -38,7 +38,7 @@ function reducer (state = initialState, action) {
     }
 }
 
-const store = Redux.createStore(reducer, composeWithDevTools());
+const store = Redux.createStore(reducer);
 
 const render = () => {
     const state = store.getState();

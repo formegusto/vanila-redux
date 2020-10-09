@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Redux Store Practice</title>
+        <!-- 리덕스 import -->
+        <script src="../modules/redux.js"></script>
+        <script src="../modules/redux-devtools.js"></script>
+        <script src="./hooks/useInput.js"></script>
+
+        <!-- 사용자 import-->
+        <script src="./index.js"></script>
+    </head>
+    <body>  
+        <input type="text" class="name" name="name" placeholder="이름을 입력해주세요." onchange="onChange(this)"/>
+        <input type="text" class="password" name="username" placeholder="닉네임을 입력해주세요." onchange="onChange(this)"/>
+        <input type="text" class="password" name="password" placeholder="비밀번호를 입력해주세요." onchange="onChange(this)"/>
+        <button type="button" onclick="onClick()"> 상태 값 확인하기 </button>
+    </body>
+</html>
