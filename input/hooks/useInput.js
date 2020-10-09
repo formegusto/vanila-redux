@@ -6,7 +6,7 @@ const changeField = (event) => ({type: 'CHANGE_FIELD', event});
 
 const initialState = {
     name: 'form',
-    form: {}
+    form: {},
 };
 
 function reducer (state = initForm, action) {
@@ -33,6 +33,9 @@ const store = Redux.createStore(reducer);
 
 const render = () => {
     const state = store.getState();
+    console.log("====Testing Zone====");
+    console.log(state);
+    console.log("====================");
 };
 
 render();
@@ -45,5 +48,12 @@ onInit = (initState) => {
 onChange = (event) => {
     store.dispatch(changeField(event));
 };
+
+onChangeWithField = (event,className) => {
+    const field = document.querySelector(`.${className}`);
+    field.innerHTML =  event.value;
+
+    store.dispatch(changeField(event));
+}
 
 onConfirm = () => store.getState();
